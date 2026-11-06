@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Header } from './components/Header';
-import { HeroSeason } from './components/HeroSeason';
-import { DailyPair } from './components/DailyPair';
-import { SeasonalIngredientsSection } from './components/SeasonalIngredientsSection';
-import { KitchenArchiveSection } from './components/KitchenArchiveSection';
-import { RecipeDetailModal } from './components/RecipeDetailModal';
-import { SavedRecipesDrawer } from './components/SavedRecipesDrawer';
-import { AboutModal } from './components/AboutModal';
-import { Footer } from './components/Footer';
+import { Header } from './components/header';
+import { HeroSeason } from './components/heroSeason';
+import { DailyPair } from './components/dailyPair';
+import { SeasonalIngredientsSection } from './components/seasonalingredientsSection';
+import { KitchenArchiveSection } from './components/kitchenArchiveSection';
+import { RecipeDetailModal } from './components/recipeDetailModal';
+import { SavedRecipesDrawer } from './components/savedRecipesDrawer';
+import { AboutModal } from './components/aboutModal';
+import { Footer } from './components/footer';
 
 import { recipesData } from './data/recipes';
 import { seasonalIngredientsData } from './data/seasonalIngredients';
