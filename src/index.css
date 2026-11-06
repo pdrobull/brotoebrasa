@@ -1,0 +1,68 @@
+:root {
+  /* Paleta oficial de cores definida no documento */
+  --color-olive: #64765A;      /* Verde oliva - Elementos principais e destaques */
+  --color-sage: #A7AD8B;       /* Sálvia - Elementos secundários */
+  --color-terracotta: #C77B55; /* Terracota - Pequenos destaques */
+  --color-cream: #F1EBDD;      /* Creme - Fundo e áreas de respiro */
+  --color-graphite: #383A32;   /* Grafite - Textos e elementos escuros */
+
+  /* Variações tonais harmônicas */
+  --color-cream-subtle: #F7F4EC;
+  --color-cream-card: #FAF7F0;
+  --color-graphite-light: #5A5D52;
+  --color-graphite-muted: #7E8274;
+  --color-border: rgba(56, 58, 50, 0.12);
+  --color-border-subtle: rgba(56, 58, 50, 0.06);
+
+  /* Tipografia definida */
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Espaçamentos e layout */
+  --container-max-width: 1240px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-graphite);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-graphite);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
