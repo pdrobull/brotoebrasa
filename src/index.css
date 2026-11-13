@@ -1,0 +1,201 @@
+:root {
+  --color-ink: #1f1a17;
+  --color-ink-soft: #4a433c;
+  --color-ink-mute: #4a433c;
+  --color-paper: #f6f1e8;
+  --color-paper-deep: #efe6d6;
+  --color-card: #faf6ee;
+  --color-urucum: #a3432b;
+  --color-ocre: #c48b3f;
+  --color-olive: #4f5e3e;
+  --color-border: rgba(31, 26, 23, 0.16);
+  --color-border-strong: rgba(31, 26, 23, 0.32);
+
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --container-max-width: 1120px;
+  --radius: 2px;
+  --ease: 160ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.55;
+  font-variant-numeric: oldstyle-nums;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4000;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-feature-settings: "liga" 1, "dlig" 1;
+  letter-spacing: 0;
+  line-height: 1.12;
+  color: var(--color-ink);
+  hyphens: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 1px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  body::before { display: none !important; }
+  .app-shell > *:not(.print-sheet) { display: none !important; }
+  body { background: #fff; color: #111; }
+  .print-sheet {
+    display: block !important;
+    padding: 0;
+    color: #111;
+  }
+  .print-masthead {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #1f1a17;
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+  }
+  .print-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+  }
+  .print-brand {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  .print-kicker {
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  .print-recipe {
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #c9bfb0;
+  }
+  .print-recipe:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  .print-recipe-kicker {
+    font-style: italic;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  .print-recipe-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .print-recipe-lead {
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .print-recipe-time {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 11px;
+    margin-bottom: 18px;
+  }
+  .print-recipe-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr;
+    gap: 28px;
+  }
+  .print-col-title {
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #1f1a17;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+  .print-ingredients {
+    list-style: none;
+  }
+  .print-ingredients li {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 8px;
+    padding: 4px 0;
+    border-bottom: 1px dotted #c9bfb0;
+    font-size: 13px;
+  }
+  .print-qty {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 11px;
+  }
+  .print-steps {
+    padding-left: 18px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .print-steps li {
+    margin-bottom: 8px;
+  }
+  .print-note {
+    margin-top: 14px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
