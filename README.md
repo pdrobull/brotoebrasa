@@ -79,11 +79,18 @@ npm run build
 
 # 4. Pré-visualizar a build de produção localmente
 npm run preview
-6. Tecnologias Utilizadas
-React 19
-TypeScript
-Vite
-Lucide React (iconografia limpa e funcional)
-Google Fonts (DM Serif Display e Inter)
-7. Licença
+```
+
+O site público no GitHub Pages fica em `https://pdrobull.github.io/brotoebrasa/`. O workflow em `.github/workflows/deploy.yml` roda `npm ci`, `npm run build` e publica a pasta `dist/`. Em Settings > Pages, o source deve ser **GitHub Actions**.
+
+## 6. Tecnologias Utilizadas
+
+- React 19
+- TypeScript
+- Vite
+- Lucide React (iconografia limpa e funcional)
+- Google Fonts (DM Serif Display e Inter)
+
+## 7. Licença
+
 Este projeto é desenvolvido para fins editoriais e culturais sob licença MIT. Fotografias pertencem aos seus respectivos autores e são creditadas individualmente.
